@@ -5,17 +5,25 @@
  */
 package Formas;
 
+import com.sun.awt.AWTUtilities;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author wwwki
  */
-public class jfLogin extends javax.swing.JFrame {
-
+public class jfSplash extends javax.swing.JFrame implements Runnable{
+    private Thread tiempo = null;
     /**
-     * Creates new form jfLogin
+     * Creates new form jfSplash
      */
-    public jfLogin() {
+    public jfSplash() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        AWTUtilities.setWindowOpaque(this, false);
+        tiempo = new Thread(this);
+        tiempo.start();
     }
 
     /**
@@ -27,18 +35,18 @@ public class jfLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tenor.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 220, -1));
 
-        jLabel1.setText("Titulo");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/splash.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -60,26 +68,41 @@ public class jfLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfSplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfSplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfSplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfSplash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jfLogin().setVisible(true);
+                new jfSplash().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void run() {
+        while(tiempo != null){                   
+            try {
+                
+                Thread.sleep(5000);
+                this.dispose();
+                
+            } catch (InterruptedException ex) {
+                Logger.getLogger(jfSplash.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                    
+        }                
+    }
 }
