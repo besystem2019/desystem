@@ -15,7 +15,7 @@ public class DESystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello there");
+        System.out.println("Hello there, general Kenobi!");
     }
     
 }
