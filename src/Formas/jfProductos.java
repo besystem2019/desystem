@@ -5,9 +5,10 @@
  */
 package Formas;
 
+import Animacion.Fade;
+import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
-import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -15,23 +16,22 @@ import javax.swing.JOptionPane;
  *
  * @author wwwki
  */
-public class jfLogin extends javax.swing.JFrame {
+public class jfProductos extends javax.swing.JFrame {
 
     /**
-     * Creates new form jfLogin
+     * Creates new form jfMenu
      */
-    public jfLogin() {
+    public jfProductos() {
         initComponents();
-        this.setLocationRelativeTo(null);
-//        rsscalelabel.RSScaleLabel.setScaleLabel(lblFondo, "\\src\\Imagenes\\CyCo128.png");
-               
         
+        this.setLocationRelativeTo(null);
         //FONDO CON IMAGEN--------------------------------------------------------------------------------
-        ImageIcon imagen = new ImageIcon("src\\Imagenes\\img_21.jpeg");        
+        ImageIcon imagen = new ImageIcon("src\\Imagenes\\productos.jpeg");        
         Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_DEFAULT));
         lblFondo.setIcon(icono);
         lblFondo.repaint();
-          
+        
+        
         
     }
 
@@ -44,56 +44,19 @@ public class jfLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         lblSalir = new javax.swing.JLabel();
+        lblNombreCliente = new javax.swing.JLabel();
+        lblHora = new javax.swing.JLabel();
+        lblFecha = new javax.swing.JLabel();
+        lblFecha1 = new javax.swing.JLabel();
+        lblHora1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Username:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 130, 50));
-
-        jTextField2.setBackground(new java.awt.Color(204, 0, 0));
-        jTextField2.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
-        jTextField2.setForeground(java.awt.Color.black);
-        jTextField2.setText("jTextField1");
-        jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 520, 50));
-
-        jTextField3.setBackground(new java.awt.Color(204, 0, 0));
-        jTextField3.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
-        jTextField3.setForeground(java.awt.Color.black);
-        jTextField3.setText("jTextField1");
-        jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 520, 50));
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel2.setForeground(java.awt.Color.white);
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Ingresar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 333, 180, -1));
-
-        jLabel3.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Password:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 140, 30));
-
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel4.setForeground(java.awt.Color.white);
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Login");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 110, 60));
 
         lblSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btn on_32.png"))); // NOI18N
@@ -110,11 +73,53 @@ public class jfLogin extends javax.swing.JFrame {
                 lblSalirMouseExited(evt);
             }
         });
-        getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 3, 40, 40));
+        getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 5, 40, 40));
 
-        lblFondo.setForeground(java.awt.Color.white);
-        lblFondo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 390));
+        lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lblNombreCliente.setForeground(java.awt.Color.white);
+        lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNombreCliente.setText("Productos");
+        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1020, -1));
+
+        lblHora.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblHora.setForeground(java.awt.Color.white);
+        lblHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHora.setText("Eliminar");
+        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 450, 110, 30));
+
+        lblFecha.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblFecha.setForeground(java.awt.Color.white);
+        lblFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFecha.setText("Modificar");
+        getContentPane().add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 33, 120, 20));
+
+        lblFecha1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblFecha1.setForeground(java.awt.Color.white);
+        lblFecha1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFecha1.setText("Modificar");
+        getContentPane().add(lblFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 120, 20));
+
+        lblHora1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblHora1.setForeground(java.awt.Color.white);
+        lblHora1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHora1.setText("Eliminar");
+        getContentPane().add(lblHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 110, 30));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 111, 680, 280));
+        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,8 +132,8 @@ public class jfLogin extends javax.swing.JFrame {
         int dialog = JOptionPane.YES_NO_OPTION;
         int result = JOptionPane.showConfirmDialog(null, "¿Desea salir?","Salir",dialog);
         if(result == 0){
-            //Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
-            System.exit(0);
+            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
+            
         }
     }//GEN-LAST:event_lblSalirMouseClicked
 
@@ -153,32 +158,36 @@ public class jfLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jfLogin().setVisible(true);
+                new jfProductos().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblFecha1;
     private javax.swing.JLabel lblFondo;
+    private javax.swing.JLabel lblHora;
+    private javax.swing.JLabel lblHora1;
+    private javax.swing.JLabel lblNombreCliente;
     private javax.swing.JLabel lblSalir;
     // End of variables declaration//GEN-END:variables
 }

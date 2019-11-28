@@ -16,12 +16,12 @@ import javax.swing.JOptionPane;
  *
  * @author wwwki
  */
-public class jfMenu extends javax.swing.JFrame {
+public class jfPersonas extends javax.swing.JFrame {
 
     /**
      * Creates new form jfMenu
      */
-    public jfMenu() {
+    public jfPersonas() {
         initComponents();
         
         this.setLocationRelativeTo(null);
@@ -45,13 +45,13 @@ public class jfMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         lblSalir = new javax.swing.JLabel();
-        lblPersonas = new javax.swing.JLabel();
-        lblReportes = new javax.swing.JLabel();
-        lblVentas = new javax.swing.JLabel();
-        lblTexto_reportes = new javax.swing.JLabel();
+        lblUsuarios = new javax.swing.JLabel();
+        lblClientes = new javax.swing.JLabel();
+        lblEmpleados = new javax.swing.JLabel();
+        lblTexto_clientes = new javax.swing.JLabel();
         lblNombreCliente = new javax.swing.JLabel();
-        lblTexto_personas = new javax.swing.JLabel();
-        lblTexto_ventas = new javax.swing.JLabel();
+        lblTextp_usuario = new javax.swing.JLabel();
+        lblTexto_empleados = new javax.swing.JLabel();
         lblHora = new javax.swing.JLabel();
         lblFecha = new javax.swing.JLabel();
         lblFondo = new javax.swing.JLabel();
@@ -77,53 +77,53 @@ public class jfMenu extends javax.swing.JFrame {
         });
         getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 5, 40, 40));
 
-        lblPersonas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPersonas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/personas_185.png"))); // NOI18N
-        lblPersonas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        lblUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/usuarios_125.png"))); // NOI18N
+        lblUsuarios.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                lblPersonasMouseMoved(evt);
+                lblUsuariosMouseMoved(evt);
             }
         });
-        lblPersonas.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblPersonasMouseExited(evt);
+                lblUsuariosMouseExited(evt);
             }
         });
-        getContentPane().add(lblPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 230, 250));
+        getContentPane().add(lblUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 230, 250));
 
-        lblReportes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/reportes_185.png"))); // NOI18N
-        lblReportes.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        lblClientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clientes_185.png"))); // NOI18N
+        lblClientes.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                lblReportesMouseMoved(evt);
+                lblClientesMouseMoved(evt);
             }
         });
-        lblReportes.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblClientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblReportesMouseExited(evt);
+                lblClientesMouseExited(evt);
             }
         });
-        getContentPane().add(lblReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 70, 230, 250));
+        getContentPane().add(lblClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 70, 230, 250));
 
-        lblVentas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ventas_250.png"))); // NOI18N
-        lblVentas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        lblEmpleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/empleado_185s.png"))); // NOI18N
+        lblEmpleados.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                lblVentasMouseMoved(evt);
+                lblEmpleadosMouseMoved(evt);
             }
         });
-        lblVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblVentasMouseExited(evt);
+                lblEmpleadosMouseExited(evt);
             }
         });
-        getContentPane().add(lblVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 230, 240));
+        getContentPane().add(lblEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 230, 240));
 
-        lblTexto_reportes.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lblTexto_reportes.setForeground(java.awt.Color.white);
-        lblTexto_reportes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTexto_reportes.setText("Reportes");
-        getContentPane().add(lblTexto_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 280, 230, -1));
+        lblTexto_clientes.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblTexto_clientes.setForeground(java.awt.Color.white);
+        lblTexto_clientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTexto_clientes.setText("Clientes");
+        getContentPane().add(lblTexto_clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 280, 230, -1));
 
         lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblNombreCliente.setForeground(java.awt.Color.white);
@@ -131,17 +131,17 @@ public class jfMenu extends javax.swing.JFrame {
         lblNombreCliente.setText("DAYA ADM");
         getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 1020, -1));
 
-        lblTexto_personas.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lblTexto_personas.setForeground(java.awt.Color.white);
-        lblTexto_personas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTexto_personas.setText("Personas");
-        getContentPane().add(lblTexto_personas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 230, -1));
+        lblTextp_usuario.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblTextp_usuario.setForeground(java.awt.Color.white);
+        lblTextp_usuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTextp_usuario.setText("Usuarios");
+        getContentPane().add(lblTextp_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 230, -1));
 
-        lblTexto_ventas.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lblTexto_ventas.setForeground(java.awt.Color.white);
-        lblTexto_ventas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTexto_ventas.setText("Ventas");
-        getContentPane().add(lblTexto_ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 230, -1));
+        lblTexto_empleados.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblTexto_empleados.setForeground(java.awt.Color.white);
+        lblTexto_empleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTexto_empleados.setText("Empleados");
+        getContentPane().add(lblTexto_empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 230, -1));
 
         lblHora.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblHora.setForeground(java.awt.Color.white);
@@ -176,29 +176,29 @@ public class jfMenu extends javax.swing.JFrame {
         lblSalir.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(41,42,44)));
     }//GEN-LAST:event_lblSalirMouseExited
 
-    private void lblPersonasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPersonasMouseMoved
-        lblPersonas.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
-    }//GEN-LAST:event_lblPersonasMouseMoved
+    private void lblUsuariosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUsuariosMouseMoved
+        lblUsuarios.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
+    }//GEN-LAST:event_lblUsuariosMouseMoved
 
-    private void lblPersonasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPersonasMouseExited
-        lblPersonas.setBorder(null);
-    }//GEN-LAST:event_lblPersonasMouseExited
+    private void lblUsuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUsuariosMouseExited
+        lblUsuarios.setBorder(null);
+    }//GEN-LAST:event_lblUsuariosMouseExited
 
-    private void lblVentasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentasMouseMoved
-        lblVentas.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
-    }//GEN-LAST:event_lblVentasMouseMoved
+    private void lblEmpleadosMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadosMouseMoved
+        lblEmpleados.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
+    }//GEN-LAST:event_lblEmpleadosMouseMoved
 
-    private void lblVentasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentasMouseExited
-        lblVentas.setBorder(null);
-    }//GEN-LAST:event_lblVentasMouseExited
+    private void lblEmpleadosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadosMouseExited
+        lblEmpleados.setBorder(null);
+    }//GEN-LAST:event_lblEmpleadosMouseExited
 
-    private void lblReportesMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReportesMouseMoved
-        lblReportes.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
-    }//GEN-LAST:event_lblReportesMouseMoved
+    private void lblClientesMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblClientesMouseMoved
+        lblClientes.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
+    }//GEN-LAST:event_lblClientesMouseMoved
 
-    private void lblReportesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReportesMouseExited
-        lblReportes.setBorder(null);
-    }//GEN-LAST:event_lblReportesMouseExited
+    private void lblClientesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblClientesMouseExited
+        lblClientes.setBorder(null);
+    }//GEN-LAST:event_lblClientesMouseExited
 
     /**
      * @param args the command line arguments
@@ -217,35 +217,36 @@ public class jfMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jfMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfPersonas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jfMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfPersonas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jfMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfPersonas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jfMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jfPersonas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jfMenu().setVisible(true);
+                new jfPersonas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblClientes;
+    private javax.swing.JLabel lblEmpleados;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JLabel lblHora;
     private javax.swing.JLabel lblNombreCliente;
-    private javax.swing.JLabel lblPersonas;
-    private javax.swing.JLabel lblReportes;
     private javax.swing.JLabel lblSalir;
-    private javax.swing.JLabel lblTexto_personas;
-    private javax.swing.JLabel lblTexto_reportes;
-    private javax.swing.JLabel lblTexto_ventas;
-    private javax.swing.JLabel lblVentas;
+    private javax.swing.JLabel lblTexto_clientes;
+    private javax.swing.JLabel lblTexto_empleados;
+    private javax.swing.JLabel lblTextp_usuario;
+    private javax.swing.JLabel lblUsuarios;
     // End of variables declaration//GEN-END:variables
 }
