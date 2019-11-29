@@ -32,7 +32,16 @@ public class jfProductos extends javax.swing.JFrame {
         lblFondo.repaint();
         
         
+        jtxtImei.setBackground(new Color(0,0,0,64));
+        jtxtCompra.setBackground(new Color(0,0,0,64));
+        jtxtCosto.setBackground(new Color(0,0,0,64));
         
+        jtxtTasa.setBackground(new Color(0,0,0,64));
+        jtxtGanancia.setBackground(new Color(0,0,0,64));
+        
+        //jsepImei.setBackground(Color.red);
+        sep1.setForeground(Color.green); // top line color
+        sep1.setBackground(Color.green.brighter()); // bottom line color
     }
 
     /**
@@ -50,8 +59,24 @@ public class jfProductos extends javax.swing.JFrame {
         lblFecha = new javax.swing.JLabel();
         lblFecha1 = new javax.swing.JLabel();
         lblHora1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jtxtCompra = new javax.swing.JTextField();
+        jtxtCosto = new javax.swing.JTextField();
+        jtxtImei = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        sep1 = new javax.swing.JSeparator();
+        sep2 = new javax.swing.JSeparator();
+        sep3 = new javax.swing.JSeparator();
+        jButton2 = new javax.swing.JButton();
+        jtxtTasa = new javax.swing.JTextField();
+        sep4 = new javax.swing.JSeparator();
+        jtxtGanancia = new javax.swing.JTextField();
+        sep5 = new javax.swing.JSeparator();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,25 +110,56 @@ public class jfProductos extends javax.swing.JFrame {
         lblHora.setForeground(java.awt.Color.white);
         lblHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHora.setText("Eliminar");
-        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 450, 110, 30));
+        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 470, 110, 30));
 
         lblFecha.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblFecha.setForeground(java.awt.Color.white);
         lblFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFecha.setText("Modificar");
-        getContentPane().add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 33, 120, 20));
+        lblFecha.setText("Nuevo");
+        getContentPane().add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 120, 20));
 
         lblFecha1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblFecha1.setForeground(java.awt.Color.white);
         lblFecha1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFecha1.setText("Modificar");
-        getContentPane().add(lblFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 120, 20));
+        getContentPane().add(lblFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 120, 20));
 
         lblHora1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblHora1.setForeground(java.awt.Color.white);
         lblHora1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHora1.setText("Eliminar");
+        lblHora1.setText("Buscar");
         getContentPane().add(lblHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 110, 30));
+
+        jComboBox1.setBackground(new java.awt.Color(255, 0, 0));
+        jComboBox1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROOVEDOR", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(null);
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 270, 20));
+
+        jComboBox2.setBackground(new java.awt.Color(255, 0, 0));
+        jComboBox2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CATEGORIA", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setBorder(null);
+        jComboBox2.setOpaque(false);
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 162, 270, 20));
+
+        jComboBox3.setBackground(new java.awt.Color(255, 0, 0));
+        jComboBox3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MARCA", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setBorder(null);
+        jComboBox3.setOpaque(false);
+        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 184, 270, 20));
+
+        jComboBox4.setBackground(new java.awt.Color(255, 0, 0));
+        jComboBox4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jComboBox4.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MODELO", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.setBorder(null);
+        jComboBox4.setOpaque(false);
+        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 207, 270, 20));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -118,8 +174,69 @@ public class jfProductos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 111, 680, 280));
-        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 510));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 131, 680, 260));
+
+        jtxtCompra.setBackground(new java.awt.Color(0, 0, 0));
+        jtxtCompra.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jtxtCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jtxtCompra.setText("R. COMPRA *");
+        jtxtCompra.setBorder(null);
+        getContentPane().add(jtxtCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 260, 265, -1));
+
+        jtxtCosto.setBackground(new java.awt.Color(0, 0, 0));
+        jtxtCosto.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jtxtCosto.setForeground(new java.awt.Color(255, 255, 255));
+        jtxtCosto.setText("COSTO *");
+        jtxtCosto.setBorder(null);
+        getContentPane().add(jtxtCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 290, 265, -1));
+
+        jtxtImei.setBackground(new java.awt.Color(0, 0, 0));
+        jtxtImei.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jtxtImei.setForeground(new java.awt.Color(255, 255, 255));
+        jtxtImei.setText("COD. IMEI *");
+        jtxtImei.setBorder(null);
+        jtxtImei.setOpaque(false);
+        getContentPane().add(jtxtImei, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 230, 265, -1));
+
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Actualizar");
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorderPainted(false);
+        jButton1.setOpaque(false);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 270, -1));
+        getContentPane().add(sep1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 270, 10));
+        getContentPane().add(sep2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 270, 10));
+        getContentPane().add(sep3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 270, 10));
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Guardar");
+        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorderPainted(false);
+        jButton2.setOpaque(false);
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 270, 30));
+
+        jtxtTasa.setBackground(new java.awt.Color(0, 0, 0));
+        jtxtTasa.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jtxtTasa.setForeground(new java.awt.Color(255, 255, 255));
+        jtxtTasa.setText("Tasa del día");
+        jtxtTasa.setBorder(null);
+        jtxtTasa.setOpaque(false);
+        getContentPane().add(jtxtTasa, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 200, -1));
+        getContentPane().add(sep4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 430, 200, 10));
+
+        jtxtGanancia.setBackground(new java.awt.Color(0, 0, 0));
+        jtxtGanancia.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jtxtGanancia.setForeground(new java.awt.Color(255, 255, 255));
+        jtxtGanancia.setText("% de Ganancia");
+        jtxtGanancia.setBorder(null);
+        jtxtGanancia.setOpaque(false);
+        getContentPane().add(jtxtGanancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, 200, -1));
+        getContentPane().add(sep5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 200, 10));
+        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -180,8 +297,19 @@ public class jfProductos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jtxtCompra;
+    private javax.swing.JTextField jtxtCosto;
+    private javax.swing.JTextField jtxtGanancia;
+    private javax.swing.JTextField jtxtImei;
+    private javax.swing.JTextField jtxtTasa;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblFecha1;
     private javax.swing.JLabel lblFondo;
@@ -189,5 +317,10 @@ public class jfProductos extends javax.swing.JFrame {
     private javax.swing.JLabel lblHora1;
     private javax.swing.JLabel lblNombreCliente;
     private javax.swing.JLabel lblSalir;
+    private javax.swing.JSeparator sep1;
+    private javax.swing.JSeparator sep2;
+    private javax.swing.JSeparator sep3;
+    private javax.swing.JSeparator sep4;
+    private javax.swing.JSeparator sep5;
     // End of variables declaration//GEN-END:variables
 }
