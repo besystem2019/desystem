@@ -29,7 +29,7 @@ public class jfEmpleados extends javax.swing.JFrame {
         
         //FONDO CON IMAGEN--------------------------------------------------------------------------------
         Img_fondo_label fondoLabel = new Img_fondo_label();
-        fondoLabel.Llenar_Label("clientes_empleados_usuarios.jpeg", lblFondo);
+        fondoLabel.Llenar_Label("ventana de clientes-usuarios-empleados.jpg", lblFondo);
         fondoLabel.Llenar_Label("daika adm.png", lblNombreCliente);
         
         fondoLabel.Llenar_Label("ingresar.png", lblIngresar);
@@ -78,6 +78,14 @@ public class jfEmpleados extends javax.swing.JFrame {
         lblActualizar = new javax.swing.JLabel();
         lbl_imgCliente = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,7 +112,7 @@ public class jfEmpleados extends javax.swing.JFrame {
         lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblNombreCliente.setForeground(java.awt.Color.white);
         lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 250, 50));
+        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 250, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -126,56 +134,56 @@ public class jfEmpleados extends javax.swing.JFrame {
         jtxtEdad.setForeground(new java.awt.Color(255, 255, 255));
         jtxtEdad.setText("Edad");
         jtxtEdad.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 210, 20));
+        getContentPane().add(jtxtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 180, 20));
 
         jtxtCedula.setBackground(new java.awt.Color(204, 0, 0));
         jtxtCedula.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtCedula.setForeground(new java.awt.Color(255, 255, 255));
         jtxtCedula.setText("Cedula");
         jtxtCedula.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 210, 20));
+        getContentPane().add(jtxtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 180, 20));
 
         jtxtDirec.setBackground(new java.awt.Color(204, 0, 0));
         jtxtDirec.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtDirec.setForeground(new java.awt.Color(255, 255, 255));
         jtxtDirec.setText("Direccion");
         jtxtDirec.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtDirec, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 210, 20));
+        getContentPane().add(jtxtDirec, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 180, 20));
 
         jtxtEmail.setBackground(new java.awt.Color(204, 0, 0));
         jtxtEmail.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtEmail.setForeground(new java.awt.Color(255, 255, 255));
         jtxtEmail.setText("Email");
         jtxtEmail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 210, 20));
+        getContentPane().add(jtxtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 180, 20));
 
         jtxtTelefono.setBackground(new java.awt.Color(204, 0, 0));
         jtxtTelefono.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtTelefono.setForeground(new java.awt.Color(255, 255, 255));
         jtxtTelefono.setText("Telefono");
         jtxtTelefono.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 210, 20));
+        getContentPane().add(jtxtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 180, 20));
 
         jtxtFechaNac.setBackground(new java.awt.Color(204, 0, 0));
         jtxtFechaNac.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtFechaNac.setForeground(new java.awt.Color(255, 255, 255));
         jtxtFechaNac.setText("Fecha Nacimiento");
         jtxtFechaNac.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 210, 20));
+        getContentPane().add(jtxtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 180, 20));
 
         jtxtNombre.setBackground(new java.awt.Color(204, 0, 0));
         jtxtNombre.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtNombre.setForeground(new java.awt.Color(255, 255, 255));
         jtxtNombre.setText("Nombres");
         jtxtNombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 210, 20));
+        getContentPane().add(jtxtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 180, 20));
 
         jtxtApellido.setBackground(new java.awt.Color(204, 0, 0));
         jtxtApellido.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jtxtApellido.setForeground(new java.awt.Color(255, 255, 255));
         jtxtApellido.setText("Apellidos");
         jtxtApellido.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jtxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 210, 20));
+        getContentPane().add(jtxtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 180, 20));
 
         lblIngresar.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblIngresar.setForeground(java.awt.Color.white);
@@ -195,14 +203,62 @@ public class jfEmpleados extends javax.swing.JFrame {
         lblActualizar.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblActualizar.setForeground(java.awt.Color.white);
         lblActualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, 140, 20));
-        getContentPane().add(lbl_imgCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 253, 130, 80));
+        getContentPane().add(lblActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, 140, 20));
+        getContentPane().add(lbl_imgCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 130, 100));
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Empleados");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 110, -1));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("DIreccion:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 110, -1));
+
+        jLabel2.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Empleados");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 140, -1));
+
+        jLabel3.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Nombres:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 110, -1));
+
+        jLabel4.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Apellidos:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 110, -1));
+
+        jLabel5.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Edad:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 110, -1));
+
+        jLabel6.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel6.setText("Cedula:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 110, -1));
+
+        jLabel7.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Fecha Nac:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 110, -1));
+
+        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel8.setText("Telefono:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 110, -1));
+
+        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setText("Email:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 110, -1));
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 600));
 
         pack();
@@ -277,6 +333,14 @@ public class jfEmpleados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jtxtApellido;

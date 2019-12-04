@@ -29,7 +29,7 @@ public class jfUsuarios extends javax.swing.JFrame {
         
         //FONDO CON IMAGEN--------------------------------------------------------------------------------
         Img_fondo_label fondoLabel = new Img_fondo_label();
-        fondoLabel.Llenar_Label("clientes_empleados_usuarios.jpeg", lblFondo);
+        fondoLabel.Llenar_Label("ventana de clientes-usuarios-empleados.jpg", lblFondo);
         fondoLabel.Llenar_Label("daika adm.png", lblNombreCliente);
         
         fondoLabel.Llenar_Label("ingresar.png", lblIngresar);
@@ -103,7 +103,7 @@ public class jfUsuarios extends javax.swing.JFrame {
         lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblNombreCliente.setForeground(java.awt.Color.white);
         lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 250, 50));
+        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 250, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -152,14 +152,14 @@ public class jfUsuarios extends javax.swing.JFrame {
         lblActualizar.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblActualizar.setForeground(java.awt.Color.white);
         lblActualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, 140, 20));
-        getContentPane().add(lbl_imgCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 90, 100));
+        getContentPane().add(lblActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 140, 20));
+        getContentPane().add(lbl_imgCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 120, 140));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Usuarios");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 90, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));

@@ -48,7 +48,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/usuarios_125.png"/>
+          <Image iconType="3" name="/Imagenes/usuarios.png"/>
         </Property>
       </Properties>
       <Events>
@@ -57,7 +57,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="70" width="230" height="250"/>
+          <AbsoluteConstraints x="30" y="40" width="230" height="250"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -65,7 +65,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/clientes_185.png"/>
+          <Image iconType="3" name="/Imagenes/clientes.png"/>
         </Property>
       </Properties>
       <Events>
@@ -74,7 +74,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="760" y="70" width="230" height="250"/>
+          <AbsoluteConstraints x="760" y="40" width="230" height="270"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -82,7 +82,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/empleado_185s.png"/>
+          <Image iconType="3" name="/Imagenes/empleados.png"/>
         </Property>
       </Properties>
       <Events>
@@ -91,7 +91,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="400" y="100" width="230" height="240"/>
+          <AbsoluteConstraints x="360" y="70" width="300" height="270"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -105,10 +105,11 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Clientes"/>
+        <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="760" y="280" width="230" height="-1"/>
+          <AbsoluteConstraints x="760" y="270" width="230" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -121,11 +122,10 @@
           <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="DAYA ADM"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="390" width="1020" height="-1"/>
+          <AbsoluteConstraints x="380" y="370" width="250" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -139,10 +139,11 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Usuarios"/>
+        <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="280" width="230" height="-1"/>
+          <AbsoluteConstraints x="30" y="260" width="230" height="70"/>
         </Constraint>
       </Constraints>
     </Component>

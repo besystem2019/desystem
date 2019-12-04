@@ -27,8 +27,8 @@ public class jfReportes extends javax.swing.JFrame {
         
         this.setLocationRelativeTo(null);
         //FONDO CON IMAGEN--------------------------------------------------------------------------------
-       Img_fondo_label fondoLabel = new Img_fondo_label();
-        fondoLabel.Llenar_Label("Reportes.jpeg", lblFondo);
+        Img_fondo_label fondoLabel = new Img_fondo_label();
+        fondoLabel.Llenar_Label("ventana_reportes.jpg", lblFondo);
         
     }
 
@@ -64,13 +64,13 @@ public class jfReportes extends javax.swing.JFrame {
                 lblSalirMouseExited(evt);
             }
         });
-        getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 40, 40));
+        getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 40, 40));
 
         lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblNombreCliente.setForeground(java.awt.Color.white);
         lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNombreCliente.setText("Reportes");
-        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 840, -1));
+        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 840, -1));
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 530));
 
         pack();

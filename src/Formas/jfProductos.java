@@ -6,6 +6,7 @@
 package Formas;
 
 import Animacion.Fade;
+import funciones_varias.Img_fondo_label;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -25,11 +26,10 @@ public class jfProductos extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        //FONDO CON IMAGEN--------------------------------------------------------------------------------
-        ImageIcon imagen = new ImageIcon("src\\Imagenes\\productos.jpeg");        
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_DEFAULT));
-        lblFondo.setIcon(icono);
-        lblFondo.repaint();
+         //FONDO CON IMAGEN--------------------------------------------------------------------------------
+        Img_fondo_label fondoLabel = new Img_fondo_label();
+        fondoLabel.Llenar_Label("ventana_productos.jpg", lblFondo);
+        //fondoLabel.Llenar_Label("daika adm.png", lblNombreCliente);
         
         
         jtxtImei.setBackground(new Color(0,0,0,64));

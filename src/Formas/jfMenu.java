@@ -6,6 +6,7 @@
 package Formas;
 
 import Animacion.Fade;
+import funciones_varias.Img_fondo_label;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -26,10 +27,9 @@ public class jfMenu extends javax.swing.JFrame {
         
         this.setLocationRelativeTo(null);
         //FONDO CON IMAGEN--------------------------------------------------------------------------------
-        ImageIcon imagen = new ImageIcon("src\\Imagenes\\img_fondo_menu.jpeg");        
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_DEFAULT));
-        lblFondo.setIcon(icono);
-        lblFondo.repaint();
+        Img_fondo_label fondoLabel = new Img_fondo_label();
+        fondoLabel.Llenar_Label("ventana_principal.jpg", lblFondo);
+        fondoLabel.Llenar_Label("daika adm.png", lblNombreCliente);
         
         
         
@@ -78,7 +78,7 @@ public class jfMenu extends javax.swing.JFrame {
         getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 5, 40, 40));
 
         lblPersonas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPersonas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/personas_185.png"))); // NOI18N
+        lblPersonas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/personas.png"))); // NOI18N
         lblPersonas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 lblPersonasMouseMoved(evt);
@@ -89,10 +89,10 @@ public class jfMenu extends javax.swing.JFrame {
                 lblPersonasMouseExited(evt);
             }
         });
-        getContentPane().add(lblPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 230, 250));
+        getContentPane().add(lblPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 230, 250));
 
         lblReportes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/reportes_185.png"))); // NOI18N
+        lblReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/reportes.png"))); // NOI18N
         lblReportes.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 lblReportesMouseMoved(evt);
@@ -103,10 +103,10 @@ public class jfMenu extends javax.swing.JFrame {
                 lblReportesMouseExited(evt);
             }
         });
-        getContentPane().add(lblReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 70, 230, 250));
+        getContentPane().add(lblReportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, 230, 250));
 
         lblVentas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ventas_250.png"))); // NOI18N
+        lblVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ventas.png"))); // NOI18N
         lblVentas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 lblVentasMouseMoved(evt);
@@ -117,43 +117,42 @@ public class jfMenu extends javax.swing.JFrame {
                 lblVentasMouseExited(evt);
             }
         });
-        getContentPane().add(lblVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 230, 240));
+        getContentPane().add(lblVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 230, 260));
 
         lblTexto_reportes.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTexto_reportes.setForeground(java.awt.Color.white);
         lblTexto_reportes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTexto_reportes.setText("Reportes");
-        getContentPane().add(lblTexto_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 280, 230, -1));
+        getContentPane().add(lblTexto_reportes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 260, 230, 40));
 
         lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblNombreCliente.setForeground(java.awt.Color.white);
         lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNombreCliente.setText("DAYA ADM");
-        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 1020, -1));
+        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 240, 40));
 
         lblTexto_personas.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTexto_personas.setForeground(java.awt.Color.white);
         lblTexto_personas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTexto_personas.setText("Personas");
-        getContentPane().add(lblTexto_personas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 230, -1));
+        getContentPane().add(lblTexto_personas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 230, -1));
 
         lblTexto_ventas.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTexto_ventas.setForeground(java.awt.Color.white);
         lblTexto_ventas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTexto_ventas.setText("Ventas");
-        getContentPane().add(lblTexto_ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 230, -1));
+        getContentPane().add(lblTexto_ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 190, 40));
 
         lblHora.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblHora.setForeground(java.awt.Color.white);
         lblHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHora.setText("Hora");
-        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 450, 110, 30));
+        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 450, 110, 30));
 
         lblFecha.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblFecha.setForeground(java.awt.Color.white);
         lblFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFecha.setText("Fecha");
-        getContentPane().add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 100, 20));
+        getContentPane().add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 100, 20));
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 510));
 
         pack();

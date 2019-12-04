@@ -6,6 +6,7 @@
 package Formas;
 
 import Animacion.Fade;
+import funciones_varias.Img_fondo_label;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -24,12 +25,11 @@ public class jfPersonas extends javax.swing.JFrame {
     public jfPersonas() {
         initComponents();
         
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);                      
         //FONDO CON IMAGEN--------------------------------------------------------------------------------
-        ImageIcon imagen = new ImageIcon("src\\Imagenes\\img_fondo_menu.jpeg");        
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_DEFAULT));
-        lblFondo.setIcon(icono);
-        lblFondo.repaint();
+        Img_fondo_label fondoLabel = new Img_fondo_label();
+        fondoLabel.Llenar_Label("ventana_principal.jpg", lblFondo);
+        fondoLabel.Llenar_Label("daika adm.png", lblNombreCliente);                
         
         
         
@@ -78,7 +78,7 @@ public class jfPersonas extends javax.swing.JFrame {
         getContentPane().add(lblSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 5, 40, 40));
 
         lblUsuarios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/usuarios_125.png"))); // NOI18N
+        lblUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/usuarios.png"))); // NOI18N
         lblUsuarios.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 lblUsuariosMouseMoved(evt);
@@ -89,10 +89,10 @@ public class jfPersonas extends javax.swing.JFrame {
                 lblUsuariosMouseExited(evt);
             }
         });
-        getContentPane().add(lblUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 230, 250));
+        getContentPane().add(lblUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 230, 250));
 
         lblClientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clientes_185.png"))); // NOI18N
+        lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clientes.png"))); // NOI18N
         lblClientes.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 lblClientesMouseMoved(evt);
@@ -103,10 +103,10 @@ public class jfPersonas extends javax.swing.JFrame {
                 lblClientesMouseExited(evt);
             }
         });
-        getContentPane().add(lblClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 70, 230, 250));
+        getContentPane().add(lblClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, 230, 270));
 
         lblEmpleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/empleado_185s.png"))); // NOI18N
+        lblEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/empleados.png"))); // NOI18N
         lblEmpleados.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 lblEmpleadosMouseMoved(evt);
@@ -117,25 +117,26 @@ public class jfPersonas extends javax.swing.JFrame {
                 lblEmpleadosMouseExited(evt);
             }
         });
-        getContentPane().add(lblEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 230, 240));
+        getContentPane().add(lblEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 300, 270));
 
         lblTexto_clientes.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTexto_clientes.setForeground(java.awt.Color.white);
         lblTexto_clientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTexto_clientes.setText("Clientes");
-        getContentPane().add(lblTexto_clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 280, 230, -1));
+        lblTexto_clientes.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        getContentPane().add(lblTexto_clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 230, 70));
 
         lblNombreCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lblNombreCliente.setForeground(java.awt.Color.white);
         lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblNombreCliente.setText("DAYA ADM");
-        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 1020, -1));
+        getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 250, 50));
 
         lblTextp_usuario.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTextp_usuario.setForeground(java.awt.Color.white);
         lblTextp_usuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTextp_usuario.setText("Usuarios");
-        getContentPane().add(lblTextp_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 230, -1));
+        lblTextp_usuario.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        getContentPane().add(lblTextp_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 230, 70));
 
         lblTexto_empleados.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTexto_empleados.setForeground(java.awt.Color.white);

@@ -5,6 +5,7 @@
  */
 package Formas;
 
+import funciones_varias.Img_fondo_label;
 import java.awt.Image;
 import javax.swing.Icon;
 import java.awt.Color;
@@ -26,11 +27,11 @@ public class jfLogin extends javax.swing.JFrame {
 //        rsscalelabel.RSScaleLabel.setScaleLabel(lblFondo, "\\src\\Imagenes\\CyCo128.png");
                
         
-        //FONDO CON IMAGEN--------------------------------------------------------------------------------
-        ImageIcon imagen = new ImageIcon("src\\Imagenes\\img_21.jpeg");        
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_DEFAULT));
-        lblFondo.setIcon(icono);
-        lblFondo.repaint();
+        //FONDO CON IMAGEN--------------------------------------------------------------------------------                               
+        Img_fondo_label fondoLabel = new Img_fondo_label();
+        fondoLabel.Llenar_Label("login.jpeg", lblFondo);        
+        fondoLabel.Llenar_Label("login_letra.png", lblImg_login);     
+        fondoLabel.Llenar_Label("ingresar_letra.png", lblIngresar);     
           
         
     }
@@ -47,9 +48,9 @@ public class jfLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblIngresar = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblImg_login = new javax.swing.JLabel();
         lblSalir = new javax.swing.JLabel();
         lblFondo = new javax.swing.JLabel();
 
@@ -57,11 +58,11 @@ public class jfLogin extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Username:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 130, 50));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 160, 60));
 
         jTextField2.setBackground(new java.awt.Color(204, 0, 0));
         jTextField2.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
@@ -77,23 +78,31 @@ public class jfLogin extends javax.swing.JFrame {
         jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 520, 50));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel2.setForeground(java.awt.Color.white);
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Ingresar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 333, 180, -1));
+        lblIngresar.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lblIngresar.setForeground(java.awt.Color.white);
+        lblIngresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblIngresar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                lblIngresarMouseMoved(evt);
+            }
+        });
+        lblIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblIngresarMouseExited(evt);
+            }
+        });
+        getContentPane().add(lblIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 333, 240, 40));
 
-        jLabel3.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Password:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 140, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 160, 40));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel4.setForeground(java.awt.Color.white);
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Login");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 110, 60));
+        lblImg_login.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lblImg_login.setForeground(java.awt.Color.white);
+        lblImg_login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(lblImg_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 180, 40));
 
         lblSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btn on_32.png"))); // NOI18N
@@ -136,6 +145,14 @@ public class jfLogin extends javax.swing.JFrame {
         lblSalir.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(41,42,44)));
     }//GEN-LAST:event_lblSalirMouseExited
 
+    private void lblIngresarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIngresarMouseMoved
+         lblIngresar.setBorder(javax.swing.BorderFactory.createLineBorder(Color.RED));
+    }//GEN-LAST:event_lblIngresarMouseMoved
+
+    private void lblIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIngresarMouseExited
+        lblIngresar.setBorder(null);
+    }//GEN-LAST:event_lblIngresarMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -173,12 +190,12 @@ public class jfLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblFondo;
+    private javax.swing.JLabel lblImg_login;
+    private javax.swing.JLabel lblIngresar;
     private javax.swing.JLabel lblSalir;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,6 +6,7 @@
 package Formas;
 
 import Animacion.Fade;
+import funciones_varias.Img_fondo_label;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.Icon;
@@ -25,16 +26,9 @@ public class jfVentas extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
-        //FONDO CON IMAGEN--------------------------------------------------------------------------------
-        ImageIcon imagen = new ImageIcon("src\\Imagenes\\productos.jpeg");        
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_DEFAULT));
-        lblFondo.setIcon(icono);
-        lblFondo.repaint();
-        
-//        ImageIcon imagen_buscar = new ImageIcon("src\\Imagenes\\img_buscar_prod_ventas.jpeg");        
-//        Icon icono_buscar = new ImageIcon(imagen_buscar.getImage().getScaledInstance(lblFondoBuscar.getWidth(), lblFondoBuscar.getHeight(), Image.SCALE_DEFAULT));
-//        lblFondoBuscar.setIcon(icono_buscar);
-//        lblFondoBuscar.repaint();
+     //FONDO CON IMAGEN--------------------------------------------------------------------------------
+        Img_fondo_label fondoLabel = new Img_fondo_label();
+        fondoLabel.Llenar_Label("ventana_de_ventas.jpg", lblFondo);        
         
         
         jtxtImei.setBackground(new Color(0,0,0,64));
