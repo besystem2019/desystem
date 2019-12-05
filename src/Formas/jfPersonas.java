@@ -85,6 +85,9 @@ public class jfPersonas extends javax.swing.JFrame {
             }
         });
         lblUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblUsuariosMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblUsuariosMouseExited(evt);
             }
@@ -99,6 +102,9 @@ public class jfPersonas extends javax.swing.JFrame {
             }
         });
         lblClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblClientesMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblClientesMouseExited(evt);
             }
@@ -113,6 +119,9 @@ public class jfPersonas extends javax.swing.JFrame {
             }
         });
         lblEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblEmpleadosMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblEmpleadosMouseExited(evt);
             }
@@ -165,12 +174,18 @@ public class jfPersonas extends javax.swing.JFrame {
     }//GEN-LAST:event_lblSalirMouseMoved
 
     private void lblSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseClicked
-        int dialog = JOptionPane.YES_NO_OPTION;
-        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir?","Salir",dialog);
-        if(result == 0){
-            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
-            
-        }
+        
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+        jfMenu menu = new jfMenu();
+        menu.setVisible(true);
+        
+        
+//        int dialog = JOptionPane.YES_NO_OPTION;
+//        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir?","Salir",dialog);
+//        if(result == 0){
+//            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
+//            
+//        }
     }//GEN-LAST:event_lblSalirMouseClicked
 
     private void lblSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseExited
@@ -200,6 +215,25 @@ public class jfPersonas extends javax.swing.JFrame {
     private void lblClientesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblClientesMouseExited
         lblClientes.setBorder(null);
     }//GEN-LAST:event_lblClientesMouseExited
+
+    private void lblUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUsuariosMouseClicked
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE); 
+        jfUsuarios usu = new jfUsuarios();
+        usu.setVisible(true);
+    }//GEN-LAST:event_lblUsuariosMouseClicked
+
+    private void lblEmpleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadosMouseClicked
+        
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE); 
+        jfEmpleados emple = new jfEmpleados();
+        emple.setVisible(true);        
+    }//GEN-LAST:event_lblEmpleadosMouseClicked
+
+    private void lblClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblClientesMouseClicked
+       Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE); 
+       jfClientes cli = new jfClientes();
+       cli.setVisible(true);
+    }//GEN-LAST:event_lblClientesMouseClicked
 
     /**
      * @param args the command line arguments

@@ -466,12 +466,15 @@ public class jfVentas extends javax.swing.JFrame {
     }//GEN-LAST:event_lblSalirMouseMoved
 
     private void lblSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseClicked
-        int dialog = JOptionPane.YES_NO_OPTION;
-        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir?","Salir",dialog);
-        if(result == 0){
-            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
-            
-        }
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+        jfMenu menu = new jfMenu();
+        menu.setVisible(true);
+//        int dialog = JOptionPane.YES_NO_OPTION;
+//        int result = JOptionPane.showConfirmDialog(null, "¿Desea salir?","Salir",dialog);
+//        if(result == 0){
+//            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
+//            
+//        }
     }//GEN-LAST:event_lblSalirMouseClicked
 
     private void lblSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseExited

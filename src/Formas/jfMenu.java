@@ -85,6 +85,9 @@ public class jfMenu extends javax.swing.JFrame {
             }
         });
         lblPersonas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPersonasMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblPersonasMouseExited(evt);
             }
@@ -99,6 +102,9 @@ public class jfMenu extends javax.swing.JFrame {
             }
         });
         lblReportes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblReportesMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblReportesMouseExited(evt);
             }
@@ -113,6 +119,9 @@ public class jfMenu extends javax.swing.JFrame {
             }
         });
         lblVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVentasMouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblVentasMouseExited(evt);
             }
@@ -166,8 +175,9 @@ public class jfMenu extends javax.swing.JFrame {
         int dialog = JOptionPane.YES_NO_OPTION;
         int result = JOptionPane.showConfirmDialog(null, "¿Desea salir?","Salir",dialog);
         if(result == 0){
-            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.EXIT);
-            
+            Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+            jfLogin login = new jfLogin();
+            login.setVisible(true);            
         }
     }//GEN-LAST:event_lblSalirMouseClicked
 
@@ -198,6 +208,24 @@ public class jfMenu extends javax.swing.JFrame {
     private void lblReportesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReportesMouseExited
         lblReportes.setBorder(null);
     }//GEN-LAST:event_lblReportesMouseExited
+
+    private void lblPersonasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPersonasMouseClicked
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+        jfPersonas persona = new jfPersonas();
+        persona.setVisible(true);
+    }//GEN-LAST:event_lblPersonasMouseClicked
+
+    private void lblVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVentasMouseClicked
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+        jfVentas venta = new jfVentas();
+        venta.setVisible(true);
+    }//GEN-LAST:event_lblVentasMouseClicked
+
+    private void lblReportesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblReportesMouseClicked
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+        jfReportes reporte = new jfReportes();
+        reporte.setVisible(true);
+    }//GEN-LAST:event_lblReportesMouseClicked
 
     /**
      * @param args the command line arguments
