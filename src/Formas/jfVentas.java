@@ -31,6 +31,15 @@ public class jfVentas extends javax.swing.JFrame {
         fondoLabel.Llenar_Label("ventana_de_ventas.jpg", lblFondo);        
         
         
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferio);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior1);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior2);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior3);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior4);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior5);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior6);
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior7);
+        
         jtxtImei.setBackground(new Color(0,0,0,64));
 //        jtxtCompra.setBackground(new Color(0,0,0,64));
 //        jtxtCosto.setBackground(new Color(0,0,0,64));
@@ -60,7 +69,6 @@ public class jfVentas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jtxtImei = new javax.swing.JTextField();
-        sep3 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         lblHora2 = new javax.swing.JLabel();
         lblHora3 = new javax.swing.JLabel();
@@ -78,13 +86,6 @@ public class jfVentas extends javax.swing.JFrame {
         jtxtImei8 = new javax.swing.JTextField();
         jtxtImei9 = new javax.swing.JTextField();
         jtxtImei10 = new javax.swing.JTextField();
-        sep4 = new javax.swing.JSeparator();
-        sep5 = new javax.swing.JSeparator();
-        sep6 = new javax.swing.JSeparator();
-        sep7 = new javax.swing.JSeparator();
-        sep8 = new javax.swing.JSeparator();
-        sep9 = new javax.swing.JSeparator();
-        sep10 = new javax.swing.JSeparator();
         lblFecha2 = new javax.swing.JLabel();
         lblFecha3 = new javax.swing.JLabel();
         lblFecha4 = new javax.swing.JLabel();
@@ -103,6 +104,14 @@ public class jfVentas extends javax.swing.JFrame {
         jtxtSubTotal = new javax.swing.JTextField();
         lblFecha13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lblLineaInferio = new javax.swing.JLabel();
+        lblLineaInferior1 = new javax.swing.JLabel();
+        lblLineaInferior2 = new javax.swing.JLabel();
+        lblLineaInferior3 = new javax.swing.JLabel();
+        lblLineaInferior4 = new javax.swing.JLabel();
+        lblLineaInferior5 = new javax.swing.JLabel();
+        lblLineaInferior6 = new javax.swing.JLabel();
+        lblLineaInferior7 = new javax.swing.JLabel();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -182,7 +191,6 @@ public class jfVentas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jtxtImei, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 239, 290, -1));
-        getContentPane().add(sep3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 290, 10));
 
         jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -346,13 +354,6 @@ public class jfVentas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jtxtImei10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 215, 290, -1));
-        getContentPane().add(sep4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 205, 290, 10));
-        getContentPane().add(sep5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 290, 10));
-        getContentPane().add(sep6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 255, 290, 10));
-        getContentPane().add(sep7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 290, 10));
-        getContentPane().add(sep8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 305, 290, 10));
-        getContentPane().add(sep9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 290, 10));
-        getContentPane().add(sep10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 355, 290, 10));
 
         lblFecha2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblFecha2.setForeground(java.awt.Color.white);
@@ -456,6 +457,14 @@ public class jfVentas extends javax.swing.JFrame {
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setBorderPainted(false);
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 176, 60, 30));
+        getContentPane().add(lblLineaInferio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 205, 310, 7));
+        getContentPane().add(lblLineaInferior1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 310, 7));
+        getContentPane().add(lblLineaInferior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 355, 310, 7));
+        getContentPane().add(lblLineaInferior3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 254, 310, 7));
+        getContentPane().add(lblLineaInferior4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 310, 7));
+        getContentPane().add(lblLineaInferior5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 306, 310, 7));
+        getContentPane().add(lblLineaInferior6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 310, 7));
+        getContentPane().add(lblLineaInferior7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 310, 7));
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 570));
 
         pack();
@@ -601,16 +610,16 @@ public class jfVentas extends javax.swing.JFrame {
     private javax.swing.JLabel lblHora1;
     private javax.swing.JLabel lblHora2;
     private javax.swing.JLabel lblHora3;
+    private javax.swing.JLabel lblLineaInferio;
+    private javax.swing.JLabel lblLineaInferior1;
+    private javax.swing.JLabel lblLineaInferior2;
+    private javax.swing.JLabel lblLineaInferior3;
+    private javax.swing.JLabel lblLineaInferior4;
+    private javax.swing.JLabel lblLineaInferior5;
+    private javax.swing.JLabel lblLineaInferior6;
+    private javax.swing.JLabel lblLineaInferior7;
     private javax.swing.JLabel lblNombreCliente;
     private javax.swing.JLabel lblSalir;
-    private javax.swing.JSeparator sep10;
-    private javax.swing.JSeparator sep3;
-    private javax.swing.JSeparator sep4;
-    private javax.swing.JSeparator sep5;
-    private javax.swing.JSeparator sep6;
-    private javax.swing.JSeparator sep7;
-    private javax.swing.JSeparator sep8;
-    private javax.swing.JSeparator sep9;
     private javax.swing.JTextField txtImei;
     private javax.swing.JTextField txtProducto;
     // End of variables declaration//GEN-END:variables

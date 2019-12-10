@@ -43,6 +43,7 @@ public class jfReportes extends javax.swing.JFrame {
 
         lblSalir = new javax.swing.JLabel();
         lblNombreCliente = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,6 +72,20 @@ public class jfReportes extends javax.swing.JFrame {
         lblNombreCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNombreCliente.setText("Reportes");
         getContentPane().add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 840, -1));
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Finanzas");
+        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorderPainted(false);
+        jButton2.setOpaque(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, 150, 40));
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 530));
 
         pack();
@@ -95,6 +110,12 @@ public class jfReportes extends javax.swing.JFrame {
     private void lblSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSalirMouseExited
         lblSalir.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(41,42,44)));
     }//GEN-LAST:event_lblSalirMouseExited
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this,Fade.DISPOSE);
+        jfFinanzas pc = new jfFinanzas();
+        pc.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,6 +160,7 @@ public class jfReportes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JLabel lblNombreCliente;
     private javax.swing.JLabel lblSalir;

@@ -40,9 +40,7 @@ public class jfGarantias extends javax.swing.JFrame {
         fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior5);
         fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior6);
         fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior7);
-        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior8);
-        
-                        
+        fondoLabel.Llenar_Label("barra_una_punta.png", lblLineaInferior8);                                
         
         jtxtImei.setBackground(new Color(0,0,0,64));
         jtxtFechaR.setBackground(new Color(0,0,0,64));
@@ -58,11 +56,7 @@ public class jfGarantias extends javax.swing.JFrame {
         jAreaFalla.setWrapStyleWord(true);                  
         jAreaInfo.setLineWrap(true);
         jAreaInfo.setWrapStyleWord(true);  
-        
-        
-
-
-
+                
     }
 
     /**
