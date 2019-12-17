@@ -7,23 +7,29 @@ package Formas;
 
 import Animacion.Fade;
 import funciones_varias.Img_fondo_label;
+import funciones_varias.conectar;
 import java.awt.Color;
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author wwwki
  */
 public class jfProductos extends javax.swing.JFrame {
-
+    conectar cc = new conectar();
     /**
      * Creates new form jfMenu
      */
     public jfProductos() {
         initComponents();
+        
         
         this.setLocationRelativeTo(null);
          //FONDO CON IMAGEN--------------------------------------------------------------------------------
@@ -42,8 +48,95 @@ public class jfProductos extends javax.swing.JFrame {
         //jsepImei.setBackground(Color.red);
         sep1.setForeground(Color.green); // top line color
         sep1.setBackground(Color.green.brighter()); // bottom line color
+        
+        
+        
+        CargarTabla();
     }
 
+    //funcon para precargar la tabla cuando se inicia la pantalla
+    void CargarTabla(){
+    
+    //instanciamos el objeto de la tabla para luego asignarle las columnas
+    DefaultTableModel tProductos = new DefaultTableModel();
+    tProductos.addColumn("id_prod");
+    tProductos.addColumn("iEstado");
+    tProductos.addColumn("PRODUCTO");
+    tProductos.addColumn("MARCA");
+    tProductos.addColumn("COSTO");
+    jtProductos.setModel(tProductos);
+    
+    
+    // Esta parte sirve para asitnarl eun tamaño en especifico a cada columna, en este caso las primeras dos
+    // el tamaño esta en 0 ya que no es necesario que se miren estas columnas, pero que si esxistan para poder 
+    // manejar esos datos mas adelante.
+     //id_prod
+     jtProductos.getColumnModel().getColumn(0).setMaxWidth(0);
+     jtProductos.getColumnModel().getColumn(0).setMinWidth(0);
+     jtProductos.getTableHeader().getColumnModel().getColumn(0).setMaxWidth(0);
+     jtProductos.getTableHeader().getColumnModel().getColumn(0).setMinWidth(0);
+        
+     //iEstado
+     jtProductos.getColumnModel().getColumn(1).setMaxWidth(0);
+     jtProductos.getColumnModel().getColumn(1).setMinWidth(0);
+     jtProductos.getTableHeader().getColumnModel().getColumn(1).setMaxWidth(0);
+     jtProductos.getTableHeader().getColumnModel().getColumn(1).setMinWidth(0);
+            
+     //Producto
+     jtProductos.getColumnModel().getColumn(2).setMaxWidth(250);
+     jtProductos.getColumnModel().getColumn(2).setMinWidth(250);
+     jtProductos.getTableHeader().getColumnModel().getColumn(2).setMaxWidth(250);
+     jtProductos.getTableHeader().getColumnModel().getColumn(2).setMinWidth(250);
+     
+     //Marca
+     jtProductos.getColumnModel().getColumn(3).setMaxWidth(250);
+     jtProductos.getColumnModel().getColumn(3).setMinWidth(250);
+     jtProductos.getTableHeader().getColumnModel().getColumn(3).setMaxWidth(250);
+     jtProductos.getTableHeader().getColumnModel().getColumn(3).setMinWidth(250);
+            
+     //costo
+     jtProductos.getColumnModel().getColumn(4).setMaxWidth(150);
+     jtProductos.getColumnModel().getColumn(4).setMinWidth(150);
+     jtProductos.getTableHeader().getColumnModel().getColumn(4).setMaxWidth(150);
+     jtProductos.getTableHeader().getColumnModel().getColumn(4).setMinWidth(150);
+            
+        Mostrar_Datos();
+    }
+    
+    //funcion para mostrar datos en la tabla
+    
+    void Mostrar_Datos(){
+    String ssql;
+        try {            
+            Connection cn = cc.conexion();
+            //se espeficica como es la consulta a la BD
+            ssql = "";
+            ssql = ssql + "";
+            ssql = ssql + "";
+            ssql = ssql + "";
+            ssql = ssql + "";
+            String datos[] = new String[5]; // ese numero indica la cantidad de datos ue se extraera segun la consulta registrada
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(ssql);
+            while (rs.next()){
+                datos[0] = rs.getNString(1);
+                datos[1] = rs.getNString(2);
+                datos[2] = rs.getNString(3);
+                datos[3] = rs.getNString(4);
+                datos[4] = rs.getNString(5);                        
+            }
+                rs.close();
+                st.close();
+                cn.close();                                                            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al buscar cliente: " +e, "CyCo", JOptionPane.INFORMATION_MESSAGE);
+        }
+    
+    }
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -59,20 +152,24 @@ public class jfProductos extends javax.swing.JFrame {
         lblFecha = new javax.swing.JLabel();
         lblFecha1 = new javax.swing.JLabel();
         lblHora1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jcomboProveedor = new javax.swing.JComboBox<>();
+        jcomboCategoria = new javax.swing.JComboBox<>();
+        jcomboMarca = new javax.swing.JComboBox<>();
+        jcomboModelo = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtProductos = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex) {
+                return false; //Disallow the editing of any cell
+            }
+        };
         jtxtCompra = new javax.swing.JTextField();
         jtxtCosto = new javax.swing.JTextField();
         jtxtImei = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jbtnUpdate = new javax.swing.JButton();
         sep1 = new javax.swing.JSeparator();
         sep2 = new javax.swing.JSeparator();
         sep3 = new javax.swing.JSeparator();
-        jButton2 = new javax.swing.JButton();
+        jbtnGuardar = new javax.swing.JButton();
         jtxtTasa = new javax.swing.JTextField();
         sep4 = new javax.swing.JSeparator();
         jtxtGanancia = new javax.swing.JTextField();
@@ -130,49 +227,49 @@ public class jfProductos extends javax.swing.JFrame {
         lblHora1.setText("Buscar");
         getContentPane().add(lblHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 110, 30));
 
-        jComboBox1.setBackground(new java.awt.Color(255, 0, 0));
-        jComboBox1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROOVEDOR", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(null);
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 270, 20));
+        jcomboProveedor.setBackground(new java.awt.Color(255, 0, 0));
+        jcomboProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jcomboProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        jcomboProveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROOVEDOR", "Item 2", "Item 3", "Item 4" }));
+        jcomboProveedor.setBorder(null);
+        getContentPane().add(jcomboProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 270, 20));
 
-        jComboBox2.setBackground(new java.awt.Color(255, 0, 0));
-        jComboBox2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CATEGORIA", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setBorder(null);
-        jComboBox2.setOpaque(false);
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 162, 270, 20));
+        jcomboCategoria.setBackground(new java.awt.Color(255, 0, 0));
+        jcomboCategoria.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jcomboCategoria.setForeground(new java.awt.Color(255, 255, 255));
+        jcomboCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CATEGORIA", "Item 2", "Item 3", "Item 4" }));
+        jcomboCategoria.setBorder(null);
+        jcomboCategoria.setOpaque(false);
+        getContentPane().add(jcomboCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 162, 270, 20));
 
-        jComboBox3.setBackground(new java.awt.Color(255, 0, 0));
-        jComboBox3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MARCA", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setBorder(null);
-        jComboBox3.setOpaque(false);
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 184, 270, 20));
+        jcomboMarca.setBackground(new java.awt.Color(255, 0, 0));
+        jcomboMarca.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jcomboMarca.setForeground(new java.awt.Color(255, 255, 255));
+        jcomboMarca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MARCA", "Item 2", "Item 3", "Item 4" }));
+        jcomboMarca.setBorder(null);
+        jcomboMarca.setOpaque(false);
+        getContentPane().add(jcomboMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 184, 270, 20));
 
-        jComboBox4.setBackground(new java.awt.Color(255, 0, 0));
-        jComboBox4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jComboBox4.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MODELO", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setBorder(null);
-        jComboBox4.setOpaque(false);
-        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 207, 270, 20));
+        jcomboModelo.setBackground(new java.awt.Color(255, 0, 0));
+        jcomboModelo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jcomboModelo.setForeground(new java.awt.Color(255, 255, 255));
+        jcomboModelo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MODELO", "Item 2", "Item 3", "Item 4" }));
+        jcomboModelo.setBorder(null);
+        jcomboModelo.setOpaque(false);
+        getContentPane().add(jcomboModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 207, 270, 20));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtProductos);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 131, 680, 260));
 
@@ -198,26 +295,26 @@ public class jfProductos extends javax.swing.JFrame {
         jtxtImei.setOpaque(false);
         getContentPane().add(jtxtImei, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 230, 265, -1));
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 0));
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Actualizar");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setBorderPainted(false);
-        jButton1.setOpaque(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 270, -1));
+        jbtnUpdate.setBackground(new java.awt.Color(204, 0, 0));
+        jbtnUpdate.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jbtnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnUpdate.setText("Actualizar");
+        jbtnUpdate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbtnUpdate.setBorderPainted(false);
+        jbtnUpdate.setOpaque(false);
+        getContentPane().add(jbtnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 270, -1));
         getContentPane().add(sep1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 270, 10));
         getContentPane().add(sep2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 270, 10));
         getContentPane().add(sep3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 270, 10));
 
-        jButton2.setBackground(new java.awt.Color(204, 0, 0));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Guardar");
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.setBorderPainted(false);
-        jButton2.setOpaque(false);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 270, 30));
+        jbtnGuardar.setBackground(new java.awt.Color(204, 0, 0));
+        jbtnGuardar.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jbtnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnGuardar.setText("Guardar");
+        jbtnGuardar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbtnGuardar.setBorderPainted(false);
+        jbtnGuardar.setOpaque(false);
+        getContentPane().add(jbtnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 270, 30));
 
         jtxtTasa.setBackground(new java.awt.Color(0, 0, 0));
         jtxtTasa.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -297,14 +394,14 @@ public class jfProductos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JButton jbtnGuardar;
+    private javax.swing.JButton jbtnUpdate;
+    private javax.swing.JComboBox<String> jcomboCategoria;
+    private javax.swing.JComboBox<String> jcomboMarca;
+    private javax.swing.JComboBox<String> jcomboModelo;
+    private javax.swing.JComboBox<String> jcomboProveedor;
+    private javax.swing.JTable jtProductos;
     private javax.swing.JTextField jtxtCompra;
     private javax.swing.JTextField jtxtCosto;
     private javax.swing.JTextField jtxtGanancia;
