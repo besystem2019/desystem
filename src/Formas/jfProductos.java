@@ -8,6 +8,7 @@ package Formas;
 import Animacion.Fade;
 import funciones_varias.Img_fondo_label;
 import funciones_varias.conectar;
+import funciones_varias.idex_combo;
 import java.awt.Color;
 import java.awt.Image;
 import java.sql.Connection;
@@ -48,6 +49,19 @@ public class jfProductos extends javax.swing.JFrame {
         //jsepImei.setBackground(Color.red);
         sep1.setForeground(Color.green); // top line color
         sep1.setBackground(Color.green.brighter()); // bottom line color
+        
+        
+        //Llenar jcombobox
+        //Para llenar los combobox con datos de la bd utilizamos la clase creada llamada idex_combo la cual esta 
+        //en la paqueteria de funciones_varias. En esa funcion pide 4 parametros los cuales son una variable tipo jCombobox
+        // y 3 strings que piden el id de la tabla, el nombre de la tabla, y la descripcion que se mostrara en el combobox.
+        //NOTA: hay que cambiar el tipo de datos que recibira el jcombobox, por default lleva el timpo <String> hay que
+        //cambiarlo al tipo objeto <idex_combo> y para hacerlo hay que irse a propuedades del jCombobox -> Codigo -> parametro de tipo -> cambiar manualmente por <idex_combo>.
+        //Tambien hay que dejar en blanco el jCombobox, sino marcara un error, ya que este espera recibir una varibale tipo objeto
+        // y se les escribimos algo manualmente es un String, entonces es un errror de tipo de variables.
+        idex_combo combo = new idex_combo();
+        combo.llenarCombo(jcomboProveedor, "id_estado", "testado", "txt_desc");
+        
         
         
         
@@ -99,17 +113,15 @@ public class jfProductos extends javax.swing.JFrame {
      jtProductos.getColumnModel().getColumn(4).setMinWidth(150);
      jtProductos.getTableHeader().getColumnModel().getColumn(4).setMaxWidth(150);
      jtProductos.getTableHeader().getColumnModel().getColumn(4).setMinWidth(150);
-            
-        Mostrar_Datos();
-    }
-    
-    //funcion para mostrar datos en la tabla
-    
-    void Mostrar_Datos(){
-    String ssql;
+     
+    //En esta seccion es donde realizamos la consulta y el proceso para llenar la tabla con los datos de la bd. 
+     String ssql;
         try {            
             Connection cn = cc.conexion();
             //se espeficica como es la consulta a la BD
+            // tomar en cuenta tambien el uso de los where para la consulta, por ejemplo si se aplica un filtro para 
+            //realizar dicha consulta, todo ira especificado en la consulta con la cariable llamada ssql.
+            
             ssql = "";
             ssql = ssql + "";
             ssql = ssql + "";
@@ -119,24 +131,25 @@ public class jfProductos extends javax.swing.JFrame {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(ssql);
             while (rs.next()){
+                //para poder llenar los datos en las columnas de la tabla primero se coloca en cada posicion del arreglo
+                //todos los datos recuperados segun los campos que se espeficico en la consulta sql. Estos datos en en forma de
+                //arreglo sirve para poder ser agregado como una fila con sus columnas.
                 datos[0] = rs.getNString(1);
                 datos[1] = rs.getNString(2);
                 datos[2] = rs.getNString(3);
                 datos[3] = rs.getNString(4);
                 datos[4] = rs.getNString(5);                        
+                tProductos.addRow(datos); //aca es donde se agrega la fila a la tabla 
             }
+                jtProductos.setModel(tProductos); //aca se setea el modelo de la tabla con todos los datos
                 rs.close();
                 st.close();
                 cn.close();                                                            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al buscar cliente: " +e, "CyCo", JOptionPane.INFORMATION_MESSAGE);
-        }
-    
+        }                                                              
     }
-    
-    
-    
-    
+                      
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -230,7 +243,6 @@ public class jfProductos extends javax.swing.JFrame {
         jcomboProveedor.setBackground(new java.awt.Color(255, 0, 0));
         jcomboProveedor.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jcomboProveedor.setForeground(new java.awt.Color(255, 255, 255));
-        jcomboProveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROOVEDOR", "Item 2", "Item 3", "Item 4" }));
         jcomboProveedor.setBorder(null);
         getContentPane().add(jcomboProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 270, 20));
 
@@ -400,7 +412,7 @@ public class jfProductos extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jcomboCategoria;
     private javax.swing.JComboBox<String> jcomboMarca;
     private javax.swing.JComboBox<String> jcomboModelo;
-    private javax.swing.JComboBox<String> jcomboProveedor;
+    private javax.swing.JComboBox<idex_combo> jcomboProveedor;
     private javax.swing.JTable jtProductos;
     private javax.swing.JTextField jtxtCompra;
     private javax.swing.JTextField jtxtCosto;
